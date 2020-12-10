@@ -1,0 +1,422 @@
+.category
+    display: flex
+    flex-direction: column
+    align-items: center
+    min-height: 620px
+    background: #E2E1DE
+    &_title
+        display: flex
+        justify-content: center
+        align-items: center
+        font-family: IBM Plex Serif
+        font-style: normal
+        font-weight: 500
+        font-size: 37px
+        line-height: 90%
+        text-transform: uppercase
+        text-align: center
+        margin-top: 100px
+        color: #000000
+        &::before
+            content: ""
+            width: 250px
+            height: 1px
+            background: #5F5F5F
+            margin-right: 20px
+        &::after
+            content: ""
+            width: 250px
+            height: 1px
+            background: #5F5F5F
+            margin-left: 20px
+    &_filter
+        display: flex
+        justify-content: space-between
+        width: 1104px
+        margin-top: 10px
+        &_left
+            display: flex
+            justify-items: center
+            font-style: normal
+            font-weight: 500
+            font-size: 14px
+            line-height: 96%
+            color: #393939
+            &::before
+                content: ""
+                background: url('../icons/sort.svg') center center/cover no-repeat
+                width: 16px
+                height: 17px
+                margin-right: 10px
+        &_right
+            display: flex
+            justify-items: center
+            font-style: normal
+            font-weight: 500
+            font-size: 14px
+            line-height: 96%
+            color: #393939           
+            &::before
+                content: ""
+                background: url('../icons/sort.svg') center center/cover no-repeat
+                width: 16px
+                height: 17px
+                margin-right: 10px
+    .wraper
+        position: relative
+        display: flex!important
+        justify-content: center
+        align-items: center
+        flex-wrap: wrap
+        margin-top: 22px
+        padding-left: 15px;
+        width: 1110px
+        .slick-list 
+            border-radius: 5px
+        .slick-next2
+            position: absolute
+            right: -30px
+            margin-bottom: 60px
+            border: none
+            background: none
+            outline: none
+            z-index: 1
+            transition: 0.3s all ease
+            .arrow
+                width: 27px
+                height: 54px
+        .slick-prev2
+            position: absolute
+            left: -30px
+            margin-bottom: 60px
+            border: none
+            background: none
+            outline: none
+            z-index: 1
+            transition: 0.3s all ease
+            .arrow
+                width: 27px
+                height: 54px
+
+.item
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    position: relative
+    width: 255px!important
+    height: 537px
+    background: #ffffff
+    border-radius: 5px;
+    margin-bottom: 30px
+    transition: 0.3s all 
+    z-index: 9
+    cursor: pointer
+    &:hover
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        z-index: 9
+        .item_down
+            background: #F1EFEA
+        img
+            transform: scale(1.00)
+            z-index: 2
+        img ~ img
+            transform: scale(0)
+            z-index: 1
+        .item_up_btn
+            bottom: 0
+        .item_up_slider
+            .slick-next
+                right: 8px
+            .slick-prev
+                left: 8px
+        
+    &_up
+        position: relative
+        display: flex
+        justify-content: center
+        align-items: flex-end
+        width: 255px
+        height: 255px
+        background: #b49a59
+        border-radius: 5px;
+        overflow: hidden
+        z-index: 7
+        &_slider
+            position: relative
+            display: flex
+            justify-content: center
+            align-items: center
+            width: 255px
+            height: 255px
+            border-radius: 5px
+            .slick-list 
+                border-radius: 5px
+                height: 255px
+            .slick-slide
+                width: 255px!important
+            img
+                display: block
+                width: 255px
+                height: 255px
+                border-radius: 5px
+                transition: 0.3s all 
+            .slick-next
+                position: absolute
+                right: -28px
+                border: none
+                background: none
+                outline: none
+                z-index: 1
+                transition: 0.3s all ease
+                img
+                    width: 15px
+                    height: 30px
+            .slick-prev
+                position: absolute
+                left: -28px
+                border: none
+                background: none
+                outline: none
+                z-index: 1
+                transition: 0.3s all ease
+                img
+                    width: 15px
+                    height: 30px
+        &_descr
+            position: absolute
+            display: flex
+            justify-content: flex-end
+            top: 10px
+            right: 10px
+            height: 24px
+            width: 235px
+            z-index: 1
+            &:hover > .descr
+                visibility: visible
+                justify-content: center
+                align-items: center
+            .descr
+                order: 1
+                display: flex
+                justify-content: center
+                align-items: center
+                visibility: hidden
+                position: relative
+                background: #02962B
+                border-radius: 3px;
+                padding: 0 10px
+                margin-right: 10px
+                font-style: normal;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 100%;
+                text-align: right;
+                color: #FFFFFF;
+                transition: 0.3s all 
+                &::after
+                    content: ""
+                    position: absolute
+                    right: -4px
+                    width: 8px
+                    height: 8px
+                    background: #02962B
+                    transform: rotate(45deg)       
+            .icon
+                order: 2
+                width: 28px
+                height: 28px
+                display: block
+                border-radius: 50%
+                background: #02962B url('../icons/eco.svg') center center no-repeat
+                cursor: pointer
+                &:hover  .descr
+                    visibility: visible
+
+        &_btn
+            position: absolute
+            display: flex
+            justify-content: center
+            align-items: center
+            bottom: -50px
+            width: 80px
+            background: #F2C964
+            margin-bottom: 10px
+            border-radius: 25px
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            z-index: 1
+            transition: 0.3s all ease
+            .minus
+                display: flex
+                justify-content: center
+                align-items: center
+                width: 28px
+                height: 35px
+                border-radius: 25px  0 0 25px
+                font-style: normal;
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 100%;
+                text-align: center;
+                color: #000000;
+                background: #F2C964
+                outline: none
+                border-width: 0
+            input
+                height: 35px
+                border-color: none
+                outline: none
+                -webkit-appearance: none    
+                background-color: #94731e
+                border-width: 0px
+                border-color: #ffffff0
+                width: 24px
+                font-style: normal;
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 100%;
+                text-align: center;
+                color: #000000;
+                background: #F2C964
+                &::-webkit-inner-spin-button
+                    -webkit-appearance: none;
+            .plus
+                display: flex
+                justify-content: center
+                align-items: center
+                width: 28px
+                height: 35px
+                border-radius: 0 25px 25px 0
+                font-style: normal;
+                font-weight: 600;
+                font-size: 18px;
+                line-height: 100%;
+                text-align: center;
+                color: #000000;
+                outline: none
+                border-width: 0
+                background: #F2C964
+    &_down
+        position: relative
+        height: 282px
+        width: 100%
+        background: #ffffff
+        padding: 20px 20px 15px 20px
+        border-radius: 0 0 5px 5px
+        transition: 0.3s all 
+        .item_descr
+            position: absolute
+            top: 88px
+            width: 235px
+            display: flex
+            justify-items: center
+            &_left
+                display: flex
+                align-items: center
+            &_right
+                display: flex
+                align-items: center
+                margin-left: 20px
+            &_text
+                font-style: normal;
+                font-weight: 500;
+                font-size: 11px;
+                line-height: 120%;
+                color: #3E3E3E;
+                opacity: 0.6;
+                margin-left: 6px
+        .main_title
+            position: absolute
+            width: 215px
+            top: 126px
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 100%;
+            color: #535353;
+            opacity: 0.9;
+            &_dscr
+                position: relative
+                width: 215px
+                margin-top: 8px
+                font-style: normal;
+                font-weight: normal;
+                font-size: 12px;
+                line-height: 123%;
+                background: linear-gradient(0deg, #fff 0%, #090909 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                transition: 0.3s all
+            &_hover
+                position: absolute
+                bottom: 0
+                left: 0
+                width: 215px
+                height: 30px
+                background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+                transition: 0.3s all 
+                
+        .price
+            position: absolute
+            bottom: 0
+            &_wrap
+                display: flex
+                justify-content: space-between
+                width: 215px
+                margin-bottom: 15px
+            &_number
+                display: flex
+                justify-content: center
+                font-style: normal;
+                font-weight: bold;
+                font-size: 30px;
+                line-height: 100%;
+                color: #000000;
+                span
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 20px;
+                    line-height: 120%;
+                    color: #171717;
+                    text-transform: uppercase;
+                    margin-left: 5px
+                    opacity: 0.45;
+                    align-self: flex-start;
+
+                    
+            .take
+                display: flex
+                justify-content: center
+                align-items: center
+                width: 100px
+                height: 43px
+                background: #FFC73D
+                border-radius: 25px;
+                border:  0px solid #FFC73D 
+                padding: 0;
+                border-width: 0px;
+                transition: 0.3s all
+                &::before
+                    content: ""
+                    width: 20px
+                    height: 20px
+                    background: url('../icons/cart2.svg')
+                    transition: 0.3s all
+                &:hover
+                    background: #E2435A
+                    &::before
+                        content: ""
+                        width: 20px
+                        height: 20px
+                        background: url('../icons/cart_white.svg')
+                    
+
+    &_title
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 120%;
+        color: #3E3E3E;
+    
+.category_title-second
+    margin-top: 60px
+    color: #000000

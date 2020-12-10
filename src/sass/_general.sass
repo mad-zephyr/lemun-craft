@@ -1,0 +1,505 @@
+.header_mob
+    display: none
+.header
+    position: fixed
+    width: 100%
+    top: 0
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    z-index: 4
+    .preheader
+        width: 1110px
+        height: 32px;
+        background: #151D22;
+        .preheader_container
+            display: flex
+            justify-content: space-between
+            align-items: center
+            padding: 0 20px
+            margin-top: 8px
+            .lang
+                display: flex
+                align-items: center
+                width: 90px
+                height: 15px
+                list-style-type: none;
+                margin-block-start: 0;
+                margin-block-end: 0;
+                margin-inline-start: 0px;
+                margin-inline-end: 0px;
+                padding-inline-start: 0;
+                li
+                    display: flex
+                    align-items: center
+                    list-style-type: none;
+                    margin-right: 10px
+                    border-right: 1px solid #fff
+                    padding-right: 10px
+                    height: 12px
+                    &:last-of-type
+                        border-right: 0px solid #fff
+                    a
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 1;
+                        color: #E6E4E5;
+                        &:hover
+                            color: #FF8100;
+            .preheader_links
+                display: flex
+                align-items: center
+                justify-content: space-around
+                width: 560px
+                margin-block-start: 0;
+                margin-block-end: 0;
+                margin-inline-start: 0px;
+                margin-inline-end: 0px;
+                padding-inline-start: 0;
+                li
+                    list-style-type: none;
+                    display: flex
+                    align-items: center
+                    &::before
+                        content: "\2022"
+                        color: #A0A0A0
+                        padding-right: 5px
+                        font-size: 20px;
+                        line-height: 14px;
+                        &:hover
+                            color: #FF8100;
+                    a
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 12px;
+                        color: #FEFCFA;
+                        &:hover
+                            color: #FF8100;
+                        &:hover
+                            .preheader_links
+                                li
+                                   &::before
+                                       content: "\2022"
+                                       color: #FF8100;
+            .tel
+                display: flex
+                align-items: center
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 14px;
+                color: #FEFCFA;
+                &::before
+                    content: ""
+                    background: url('../icons/tel.svg')
+                    width: 18px
+                    height: 18px
+                    margin-right: 15px
+    &__main
+        position: relative
+        display: flex
+        align-items: center
+        width: 1184px
+        height: 96px
+        background: #E2435A
+        &::before
+            position: absolute
+            content: ""
+            background: url('../img/header_left.svg')
+            width: 111px
+            height: 93px
+            z-index: -1
+            margin-top: 47px
+            transform: translatex(-75px);
+        &::after
+            position: absolute
+            content: ""
+            background: url('../img/header_right.svg')
+            width: 111px
+            height: 93px
+            z-index: -1
+            margin-top: 47px
+            right: 0
+            transform: translateX(75px);
+        &_links
+            display: flex
+            align-items: center
+            margin-left: 40px
+            &_items
+                display: flex
+                align-items: center
+                font-style: normal;
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 18px;
+                text-align: center;
+                color: #FFFFFF;
+                margin-right: 45px
+                cursor: pointer
+                transition: 0.3s all
+                &:hover
+                    font-weight: 700;
+                    color: #5A4DAA
+
+        .logo
+            position: absolute
+            left:  50%
+            transform: translateX(-50%)
+        &_blocks
+            position: absolute
+            right: 50px
+            display: flex
+            align-items: center
+            &_item
+                display: flex
+                align-items: center
+                width: 120px;
+                height: 45px;
+                background: #FFFCF2;
+                border-radius: 10px;
+                margin-left: 10px
+                &_icon
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    width: 41px;
+                    height: 41px;
+                    left: calc(50% - 41px/2 + 298.5px);
+                    top: 61px;
+                    background: #1E1E1E;
+                    border-radius: 8px;
+                    margin-left: 2px
+                &_title
+                    width: 77px
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 16px;
+                    line-height: 17px;
+                    display: flex;
+                    justify-content: center
+                    text-align: center;
+                    font-feature-settings: 'kern' off;
+                    color: #014F53;
+    &__dropdown_menu
+        position: relative
+        display: flex
+        flex-direction: column
+        width: 1184px 
+        min-height: 160px
+        background: linear-gradient(91.04deg, #D73F56 -0.58%, #FD526C 49.71%, #FD5290 100%)
+        & .wraper
+            position: absolute
+            width: 100vw;
+            height: 100vh;
+            z-index: -1
+            background: rgba(21, 29, 34, 0.5)
+            left: 50%
+            transform: translateX(-50%)
+        &_up
+            height: 28px
+            width: 100%
+            background: rgba(176, 38, 59, 0.3);
+        &_down
+            display: flex
+            justify-content: space-between
+            align-items: flex-start
+            padding: 36px 50px 0 50px
+            &_items
+                display: flex
+                flex-direction: column
+                width: 120px
+                font-style: normal;
+                font-weight: 600;
+                font-size: 15px;
+                line-height: 18px;
+                color: #FFFFFF;
+                text-decoration: none
+                transition: 0.3s all
+                &::before
+                    content: ''
+                    width: 40px
+                    height: 2px
+                    background: rgba(255, 255, 255, 0.45);
+                    margin-bottom: 7px
+                &:hover
+                    text-decoration: none
+                    color: #1E1E1E;
+                    text-shadow: none
+
+.promo
+    position: relative
+    display: flex
+    justify-content: center
+    align-items: center
+    height: 1130px               
+    z-index: 1
+    background: #1e1e1e
+    &_slider
+        width: 100%
+        height: 100%
+        z-index: -1
+        &_block
+            display: flex!important
+            justify-content: center
+            align-items: center
+            height: 930px
+            background: url('../img/party.jpg') center center/cover 
+        &_arrows
+            width: 70px
+            position: absolute
+            top: 570px
+            left: calc( 50% + 450px )
+            .container
+                display: flex
+                justify-content: center
+                align-items: center
+                outline: none
+                &::before
+                    content: ""
+                    width: 32px
+                    height: 8px
+                    background: url('../icons/dots.svg') center center/cover no-repeat
+        &_slick-next
+            position: absolute
+            right: 0
+            z-index: 2
+            border: none
+            background: none
+            outline: none!important
+        &_slick-prev
+            position: absolute
+            left: 0
+            z-index: 2
+            border: none
+            background: none
+            outline: none!important
+            img
+                outline: none
+
+
+    .menu
+        display: flex
+        justify-content: space-between
+        margin: 0 auto 
+        position: absolute
+        bottom: 0
+        width: 1110px
+        height: 405px
+        z-index: 2
+        &_block
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            align-items: center
+        &_link
+            position: relative
+            margin-top: 20px
+            font-style: normal;
+            z-index: 3
+            span
+                position: absolute
+                font-weight: 600;
+                font-size: 24px;
+                line-height: 100%;
+                text-transform: uppercase;
+.line
+    position: absolute
+    bottom: -60px
+    z-index: 1
+    &_block
+        position: relative
+        display: flex
+        align-items: center
+        justify-content: space-between
+        width: 1185px;
+        height: 80px;
+        background: #534DAA;
+        &::before
+            content: ""
+            position: absolute
+            background: url('../img/left.svg') no-repeat
+            width: 37px
+            height: 22px
+            margin-top: 100px
+            z-index: -2
+            left: 0px
+        &::after
+            content: ""
+            position: absolute
+            background: url('../img/right.svg') no-repeat
+            width: 37px
+            height: 22px
+            margin-top: 100px
+            z-index: -2
+            right: 0px
+        &_left
+            height: 81px
+            width: calc( calc( 100vw - 1185px) / 2 + 28px)
+            background: #494492
+            transform: translateX(calc( -100% + 36px ))
+            margin-top: 40px;
+            z-index: -3
+        &_right
+            height: 81px
+            width: calc( calc( 100vw - 1185px) / 2 + 28px)
+            background: #494492
+            transform: translateX( calc( 100% - 37.5px ))
+            margin-top: 40px;
+            z-index: -3
+
+.orange
+    background: #FF8201
+
+.first
+    width: 350px!important
+    height: 200px
+    background: none!important
+    span
+        position: absolute
+        bottom: 25px
+        right: 25px
+        text-align: right
+        color: #fff
+    img
+        border-radius: 60px 60px 0px 60px;
+
+.second
+    width: 350px!important
+    height: 200px!important
+    background: none
+    span
+        position: absolute
+        top: 25px
+        right: 25px
+        width: 200px
+        text-align: right
+        color: #000000
+    img
+        border-radius: 60px 0px 60px 60px;
+
+.third
+    width: 260px
+    height: 200px
+    background: none
+    span
+        position: absolute
+        bottom: 25px
+        right: 25px
+        width: 200px
+        text-align: right
+        color: #fff
+    img
+        border-radius: 60px 0px;
+
+.four
+    width: 260px
+    height: 180px
+    background: none
+    span
+        position: absolute
+        top: 25px
+        right: 25px
+        width: 200px
+        text-align: right
+        color: #000000
+    img
+        border-radius: 60px 0px;
+
+.five
+    display: flex   
+    width: 170px
+    height: 483px
+    margin-top: 0px
+    .menu_link
+        display: flex
+        flex-direction: column
+        align-items: center
+        &_block
+            position: absolute
+            display: flex
+            justify-content: center
+            align-items: center
+            width: 160px;
+            height: 110px;
+            bottom: -460px
+            background: #534DAA;
+            border-radius: 30px;
+
+            font-style: normal;
+            font-weight: 600;
+            font-size: 15px;
+            line-height: 115%;
+            text-align: center;
+            text-transform: uppercase;
+            color: #ffffff;
+            z-index: 0
+        img
+            position: absolute
+            top: -60px
+            z-index: 1
+.six
+    width: 260px!important
+    height: 200px!important
+    background: none!important
+    span
+        position: absolute
+        bottom: 25px
+        left: 25px
+        width: 200px
+        text-align: left
+        color: #ffffff!important;
+    img
+        border-radius: 60px 60px 60px 0px;
+
+.seven
+    width: 260px!important
+    height: 200px!important
+    background: none!important
+    span
+        position: absolute
+        top: 25px
+        left: 25px
+        width: 200px
+        text-align: left
+        color: #000000!important;
+    img
+        border-radius: 0px 60px 60px 60px;
+
+.links_items_arrow
+    &::after
+        content: ''
+        margin-left: 7px;
+        width: 10px;
+        height: 5px;
+        background: url("../icons/drop_down.svg") center center/cover no-repeat
+
+
+.show 
+   display: flex; 
+
+
+.hide 
+    display: none;
+
+
+.fade_in
+    animation-name: fade_in;
+    animation-duration: 0.3s;
+    @keyframes fade_in 
+        from 
+            opacity: 0.1;
+        to 
+            opacity: 1;
+
+// .fade_out
+//     animation-name: fade_out;
+//     animation-duration: 0.3s;
+//     @keyframes fade_out 
+//         from 
+//             opacity: 1;
+//         to 
+//             opacity: 0.1;   
+         
